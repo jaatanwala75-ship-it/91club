@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Admin Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
@@ -16,7 +16,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .container {
             width: 100%;
             max-width: 400px;
@@ -27,83 +26,41 @@
             box-sizing: border-box;
             color: #333;
         }
-
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-
         .back-button, .menu-button {
             font-size: 24px;
             color: #00807c;
             text-decoration: none;
         }
-
-        .logo {
-            width: 150px;
-        }
-
-        .login-box {
-            padding: 5px;
-        }
-
         .login-box h2 {
             font-size: 28px;
             margin-bottom: 10px;
             color: #333;
         }
-
         .login-box p {
             font-size: 14px;
             margin-bottom: 20px;
             color: #666;
         }
-
-        .login-phone-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            background-color: #00807c;
-            color: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .login-phone-button:hover {
-            background-color: #055351;
-        }
-
-        .login-phone-button i {
-            margin-right: 8px;
-            font-size: 20px;
-        }
-
         form {
             display: flex;
             flex-direction: column;
         }
-
         label {
             margin-bottom: 5px;
             font-size: 14px;
             font-weight: 600;
             color: #333;
         }
-
         .input-group {
             position: relative;
             margin-bottom: 15px;
         }
-
         .input-group input {
             width: 100%;
             padding: 12px;
@@ -115,8 +72,6 @@
             color: #333;
             font-size: 14px;
         }
-
-        .input-group .dropdown, 
         .input-group .show-password {
             position: absolute;
             top: 50%;
@@ -126,32 +81,7 @@
             font-size: 18px;
             color: #666;
         }
-
-        .options {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .options label {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .options label input {
-            margin-right: 5px;
-        }
-
-        .forgot-password {
-            font-size: 14px;
-            color: #00807c;
-            text-decoration: none;
-        }
-
-        .login-button, .register-button {
+        .login-button {
             display: block;
             width: 100%;
             background-color: #00807c;
@@ -162,60 +92,40 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-top: 15px;
             transition: background-color 0.3s ease;
         }
-
-        .login-button:hover, .register-button:hover {
+        .login-button:hover {
             background-color: #055351;
-        }
-
-        .register-button {
-            background-color: #53b7b3;
-        }
-
-        .register-button:hover {
-            background-color: #3fb3af;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <a href="#" class="back-button"><i class="fas fa-arrow-left"></i></a>
-            <h3>Admin Login</h3>
-            <div class="menu-button"><i class="fas fa-bars"></i></div>
+            <a href="/" class="back-button"><i class="fas fa-arrow-left"></i></a>
+            <h3>Admin Panel</h3>
+            <div class="menu-button"><i class="fas fa-lock"></i></div>
         </div>
 
-        <div class="login-box ">
+        <div class="login-box">
             <h2>Log in</h2>
-            <p>Please login with your phone number or e-mail. If you forget your password, please contact customer services.</p>
+            <p>Enter your admin credentials to access the management panel.</p>
 
-            <button class="login-phone-button ">
-                <i class="fas fa-user"></i> Log in With Phone
-            </button>
-
-            <form>
-                <label for="phone">Phone Number</label>
+            <form id="adminLoginForm">
+                <label for="phone">Phone Number / Username</label>
                 <div class="input-group">
-                    <input type="text" id="phone" placeholder="Enter your phone number">
+                    <input type="text" id="phone" placeholder="Enter your phone number" required>
                 </div>
 
                 <label for="password">Password</label>
                 <div class="input-group">
-                    <input type="password" id="password" placeholder="Please Enter Your Password">
+                    <input type="password" id="password" placeholder="Enter your password" required>
                     <span class="show-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
                 </div>
 
-                <div class="options">
-                    <label>
-                        <input type="checkbox" id="remember-me"> Remember Me
-                    </label>
-                    <a href="#" class="forgot-password">Forgot Password</a>
-                </div>
-
+                <button type="submit" class="login-button" id="submitBtn">Login</button>
             </form>
-            <button class="login-button">Login</button>
         </div>
     </div>
 
@@ -233,10 +143,7 @@
                 passwordIcon.classList.add("fa-eye");
             }
         }
-    </script>
 
-    <!-- api -->
-    <script>
         function setCookie(cname, cvalue, exdays) {
             const d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -244,94 +151,42 @@
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         }
 
-        function alertMess(text) {
-            let length = $('.alert-toast .msg').length;
-            if (length == 0) {
-                $('.alert-toast').append(
-                    `
-                    <div data-v-1dcba851="" class="msg">
-                        <div data-v-1dcba851="" class="msg-content" > ${text} </div>
-                    </div>
-                    `
-                );
-                setTimeout(() => {
-                    $('.msg').fadeOut();
-                    setTimeout(() => {
-                        $('.alert-toast .msg').remove();
-                    }, 100);
-                }, 1500);
-            }
-        }
-
-        function validateForm(username, password, text) {
-            if (!username || !password) {
-                alertMess(text);
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        $('button').click(async (e) => {
+        $('#adminLoginForm').on('submit', function (e) {
             e.preventDefault();
             let username = $('#phone').val().trim();
             let password = $('#password').val().trim();
 
-            {
-                $('.van-overlay').fadeIn(10);
-                $.ajax({
-                    type: "POST",
-                    url: "/api/webapi/login-admin",
-                    data: {
-                        username: username,
-                        pwd: password,
-                    },
-                    dataType: "json",
-                    success: function (response) {
-                        if (response.status === true) {
-                            $('.van-overlay').fadeOut(300);
-                            $('.Loading').fadeIn(10);
-                            setCookie('token', response.token, 1);
-                            setCookie('auth', response.value, 1);
-                            // alertMess(response.message);
-                            setTimeout(() => {
-                                location.href = '/admin/manager/index';
-                            }, 500);
-                        } else {
-                            $('.van-overlay').fadeOut(300);
-                            alertMess(response.message);
-                        }
-                    }
-                });
+            if (!username || !password) {
+                alert("Please enter both username and password");
+                return;
             }
 
-        });
-    </script>
-    <script>
-        let getWBody = $('.mian').width();
+            $('#submitBtn').prop('disabled', true).text('Logging in...');
 
-        $('html').css('font-size', `${getWBody / 10}px`);
-        $('.van-tabbar .van-tabbar-item').css({
-            'transform': 'scale(0.9)',
-        });
-        $(window).resize(() => {
-            let getWBody = $('.mian').width();
-            $('html').css('font-size', `${getWBody / 10}px`);
-            $('.van-tabbar .van-tabbar-item').css({
-                'transform': 'scale(0.9)',
+            $.ajax({
+                type: "POST",
+                url: "/api/webapi/login-admin",
+                data: {
+                    username: username,
+                    pwd: password,
+                },
+                dataType: "json",
+                success: function (response) {
+                    if (response.status === true) {
+                        setCookie('token', response.token, 1);
+                        setCookie('auth', response.value, 1);
+                        window.location.href = '/admin/manager/index';
+                    } else {
+                        $('#submitBtn').prop('disabled', false).text('Login');
+                        alert(response.message || "Invalid credentials");
+                    }
+                },
+                error: function (xhr) {
+                    $('#submitBtn').prop('disabled', false).text('Login');
+                    alert("Server error: " + (xhr.responseJSON?.message || xhr.statusText));
+                }
             });
         });
-        function showPass() {
-          var x = document.getElementById("passwordfield");
-          var y = document.getElementById("eyeicon");
-          if (x.type === "password") {
-            x.type = "text";
-            y.src="./index_files/eyeVisible-7bc1c956.png";
-          } else {
-            x.type = "password";
-            y.src="./index_files/eyeInvisible-2fa5c152.png";
-          }
-        }
     </script>
 </body>
 </html>
