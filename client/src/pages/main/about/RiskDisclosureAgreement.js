@@ -73,7 +73,7 @@ const RiskDisclosureAgreement = () => {
           <li>
             <strong>Website</strong> refers to
             <text className="color-blue-500"></text>, accessible from
-            <text className="color-blue-500">http://ExpressClub.icu</text>
+            <text className="color-blue-500">Evionclub</text>
           </li>
           <li>
             <strong>Service</strong> refers to the Website.
