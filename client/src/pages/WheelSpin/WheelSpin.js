@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import bg from "../../assets/Daman-Wheel-Spin-bg.png";
+import bg from "../../assets/wheel-spin-bg.png";
 import { HiOutlineRefresh } from "react-icons/hi";
 import bgspin from "../../assets/bg-spin-image.png";
 import bgfrontspin from "../../assets/bg-spin-front-img.png";
