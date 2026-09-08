@@ -257,7 +257,7 @@ const Home = () => {
 
               <Link
                 className="flex justify-between items-center"
-                to={`https://h5support.expressclub.site/?token=${Cookies.get(
+                to={`/customerService
                   "auth"
                 )}`}
               >
@@ -496,22 +496,22 @@ const Home = () => {
       {topup && (
         <div className="absolute top-16 left-0 right-0 bg-light flex m-auto flex-col mx-8 pb-1 rounded-xl z-[9999] w-[80%] max-w-md">
           <div className="blue-linear2 text-center p-2 font-bold text-lg rounded-t-xl">
-            Welcome To ExpressClub
+            Welcome To Evionclub
           </div>
 
           {/* Image Scroll Area */}
           <div className="h-96 w-full overflow-x-auto overflow-y-auto text-black px-4 text-center">
-            <h1>🌟𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 ExpressClub</h1>
+            <h1>🌟𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 Evionclub</h1>
             <br />
             <br />
             <span>A secure and rewarding gaming experience starts here.</span>
             <br />
             <span>
-              Please make sure you are accessing the official ExpressClub
+              Please make sure you are accessing the official Evionclub
               website only. Beware of fake platforms, imitation websites, and
               unauthorized agents claiming to represent{" "}
             </span>{" "}
-            <b>ExpressClub.</b>
+            <b>Evionclub.</b>
             <b>For your safety:</b>
             <br />
             <ul>
@@ -609,7 +609,7 @@ const Home = () => {
             <span className="flex justify-center">
               ❤️ Your JOY is our PRIORITY ❤️
             </span>
-            <h3 className="text-center mt-4">Download ExpressClub APP now</h3>
+            <h3 className="text-center mt-4">Download Evionclub APP now</h3>
             <div className="flex  flex-col justify-center items-center px-5 h-40 w-full pb-3">
               <a href="#" className="text-blue-600">
                 ➡️DOWNLOAD APP HERE⬅️

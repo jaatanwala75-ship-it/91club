@@ -59,7 +59,7 @@ const ActivityDetail = () => {
               className="w-full"
             />
             <h3 className="heading-h3 text-center mt-3 mb-1 text-whites font-medium">
-              ExpressClub Super Jackpot
+              Evionclub Super Jackpot
             </h3>
             <div className="container-section">
               <img src={bannergetData?.activity?.ban44} alt="" />
@@ -74,7 +74,7 @@ const ActivityDetail = () => {
               className="w-full"
             />
             <h3 className="heading-h3 text-center mt-3 mb-1 text-whites font-medium">
-              ExpressClub Real-Time Rebate
+              Evionclub Real-Time Rebate
             </h3>
             <div className="container-section">
               <img src={bannergetData?.activity?.ban55} alt="" />
@@ -89,7 +89,7 @@ const ActivityDetail = () => {
               className="w-full"
             />
             <h3 className="heading-h3 text-center mt-3 mb-1 text-whites font-medium">
-              ExpressClub Youtube Creative Video Event
+              Evionclub Youtube Creative Video Event
             </h3>
 
             <div className="container-section">
@@ -105,7 +105,7 @@ const ActivityDetail = () => {
               className="w-full"
             />
             <h3 className="heading-h3 text-center mt-3 mb-1 text-whites font-medium">
-              ExpressClub Winstreak Bonus
+              Evionclub Winstreak Bonus
             </h3>
             <div className="container-section">
               <img src={bannergetData?.activity?.ban77} alt="" />

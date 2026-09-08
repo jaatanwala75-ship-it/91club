@@ -178,7 +178,7 @@ const Activity = () => {
             className="rounded-t-xl h-44 w-full"
           />
           <h3 className="heading-h3 text-whites font-bold p-2">
-            ExpressClub Super Jackpot
+            Evionclub Super Jackpot
           </h3>
         </div>
         <div
@@ -192,7 +192,7 @@ const Activity = () => {
             className="rounded-t-xl h-44 w-full"
           />
           <h3 className="heading-h3 text-whites font-bold p-2">
-            ExpressClub Real-Time Rebate
+            Evionclub Real-Time Rebate
           </h3>
         </div>
         <div
@@ -206,7 +206,7 @@ const Activity = () => {
             className="rounded-t-xl h-44 w-full"
           />
           <h3 className="heading-h3 text-whites font-bold p-2">
-            ExpressClub Youtube Creative Video Event
+            Evionclub Youtube Creative Video Event
           </h3>
         </div>
         <div
@@ -220,7 +220,7 @@ const Activity = () => {
             className="rounded-t-xl h-44 w-full"
           />
           <h3 className="heading-h3 text-whites font-bold p-2">
-            ExpressClub Winstreak Bonus
+            Evionclub Winstreak Bonus
           </h3>
         </div>
 

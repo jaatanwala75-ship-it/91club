@@ -236,7 +236,7 @@ const RechargeHistory = () => {
               </div>
               {item.status === 0 && (
                 <Link
-                  to={`https://h5support.expressclub.site//deposite?token=${Cookies.get(
+                  to={`/customerService
                     "auth",
                   )}&order=${item.id_order}&amount=${
                     item.money

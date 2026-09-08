@@ -417,7 +417,7 @@ const Main = () => {
             </div>
             <Link
               className="col-span-4  flex flex-col justify-center items-center ms-2 mt-2"
-              to={`https://h5support.expressclub.site/?token=${Cookies.get("auth")}`}
+              to={`/customerService"auth")}`}
             >
               <svg
                 data-v-159bf81f=""

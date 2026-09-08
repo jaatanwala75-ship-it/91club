@@ -141,7 +141,7 @@ const Navbar = () => {
       >
         {userInfo ? (
           <Link
-            to={`https://h5support.expressclub.site/?token=${Cookies.get("auth")}`}
+            to={`/customerService"auth")}`}
             style={{ display: "inline-block" }}
           >
             <img

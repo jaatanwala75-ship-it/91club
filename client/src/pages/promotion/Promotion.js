@@ -300,7 +300,7 @@ const Promotion = () => {
           <li className="mt-2 bg-body p-3 py-4 rounded-lg">
             <Link
               className="flex justify-between items-center"
-              to={`https://h5support.expressclub.site/?token=${Cookies.get("auth")}`}
+              to={`/customerService"auth")}`}
             >
               <div className="flex items-center">
                 <svg className="w-7 h-7 svg-icon">
