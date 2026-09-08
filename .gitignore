@@ -3,3 +3,5 @@ node_modules/
 .env.*
 controllers/trx.log
 *.log
+uploads/*
+!uploads/.gitkeep
