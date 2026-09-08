@@ -140,8 +140,7 @@ const PaymentPageUsdt = () => {
         <div className="container-section">
           <div className="text-center mb-4">
             <img
-              src="/usdt.jpeg
-"
+              src={`https://api.qrserver.com/v1/create-qr-code/?data=${usdt}&size=200x200`}
               alt=""
               className="w-60 text-center m-auto"
             />

@@ -23,7 +23,7 @@ const Apkdownload = () => {
                 alt=""
               />
             </div>
-            <a href="/expressclub-apk.apk" download>
+            <a href="/app.apk" download>
               <p className="text-sm text-white font-medium">
                 Get ₹28
               </p>
