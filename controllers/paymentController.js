@@ -351,7 +351,7 @@ const initiateSunpayPayment = async (req, res) => {
             return crypto.createHash('md5').update(signStr).digest('hex');
         }
         const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
-        const callbackurl = 'https://bdgclub.games/wallet/paynow/verify-sunpay';
+        const callbackurl = `${req.protocol}://${req.get('host')}/wallet/paynow/verify-sunpay`;
 
         const params = {
             version: '1.0',
@@ -580,12 +580,12 @@ const initiateWowPayPayment = async (req, res) => {
             order_date: date,
             goods_name: user.phone,
             // notify_url: `${process.env.APP_BASE_URL}/wallet/verify/wowpay`,
-            notify_url: `https://247cashwin.cloud/wallet/verify/wowpay`,
+            notify_url: `${req.protocol}://${req.get('host')}/wallet/verify/wowpay`,
             mch_return_msg: user.phone,
             // payment_key: 'TZLMQ1QWJCUSFLH02LAYRZBJ1WK7IHSG',
         };
 
-        params.page_url = 'https://247cashwin.cloud/wallet/verify/wowpay';
+        params.page_url = '${req.protocol}://${req.get('host')}/wallet/verify/wowpay';
 
         params.sign = wowpay.generateSign(params, process.env.WOWPAY_MERCHANT_KEY);
         // params.sign = wowpay.generateSign(params, 'TZLMQ1QWJCUSFLH02LAYRZBJ1WK7IHSG');
